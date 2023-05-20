@@ -1,27 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Weather Forecast</title>
-</head>
-<body>
+  </head>
+  <body>
     <!--City search-->
     <div class="group1">
-        <div id = "search">
-            <h1 class = "searchH1">Search a city:</h1>
-            <form id ="city-search">
-                <input name="city" type="text" placeholder="Charlotte" id="city" autofocus="true" class="city-input"/>
-                <button type="submit" id="searchButton" class="button">Search</button>
-            </form>
-            <div id="citySearchHistory"></div>
+      <div id="search">
+        <h1 class="searchH1">Search a city:</h1>
+        <form id="city-search">
+          <input
+            name="city"
+            type="text"
+            placeholder="Charlotte"
+            id="city"
+            autofocus="true"
+            class="city-input"
+          />
+          <button type="submit" id="searchButton" class="button">Search</button>
+        </form>
+        <div id="citySearchHistory"></div>
+      </div>
+    </div>
+    <!--5 day forecast-->
+    <div class="cardContainer">
+      <div class="card1">
+        <div class="day1" id="content">
+          <h4 class="date1" id="text"></h4>
+          <div class="icon1"></div>
+          <h5 class="temperature1" id="text"></h5>
         </div>
+      </div>
+
+      <div class="card2">
+        <div class="day2" id="content">
+          <h4 class="date2" id="text"></h4>
+          <div class="icon2"></div>
+          <h5 class="temperature2" id="text"></h5>
+        </div>
+      </div>
+
+      <div class="card3">
+        <div class="day3" id="content">
+          <h4 class="date3" id="text"></h4>
+          <div class="icon3"></div>
+          <h5 class="temperature3" id="text"></h5>
+        </div>
+      </div>
+
+      <div class="card4">
+        <div class="day4" id="content">
+          <h4 class="date4" id="text"></h4>
+          <div class="icon4"></div>
+          <h5 class="temperature4" id="text"></h5>
+        </div>
+      </div>
+
+      <div class="card5">
+        <div class="day5" id="content">
+          <h4 class="date5" id="text"></h4>
+          <div class="icon5"></div>
+          <h5 class="temperature5" id="text"></h5>
+        </div>
+      </div>
     </div>
 
-
-    <script src = "./assets/js/script.js"></script>
-    <script src = "http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=0094105c713bc17695af1d675f234ed7"></script>
-</body>
+    <script src="./assets/js/script.js"></script>
+    <script src="http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=0094105c713bc17695af1d675f234ed7"></script>
+  </body>
 </html>
