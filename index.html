@@ -4,9 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <title>Weather Forecast</title>
 </head>
 <body>
-    
+    <!--City search-->
+    <div class="group1">
+        <div id = "search">
+            <h1 class = "searchH1">Search a city:</h1>
+            <form id ="city-search">
+                <input name="city" type="text" placeholder="Charlotte" id="city" autofocus="true" class="city-input"/>
+                <button type="submit" id="searchButton" class="button">Search</button>
+            </form>
+            <div id="citySearchHistory"></div>
+        </div>
+    </div>
+
+
+    <script src = "./assets/js/script.js"></script>
+    <script src = "http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=0094105c713bc17695af1d675f234ed7"></script>
 </body>
 </html>
