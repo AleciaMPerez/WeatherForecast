@@ -1,0 +1,50 @@
+*{
+    background-color: lightsteelblue;
+
+}
+
+.searchH1 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande'
+}
+
+.currentContainer{
+    border: solid; 
+    border-width: medium;
+    border-color: teal;
+    border-radius: 10px;
+}
+
+.card1{
+    border: solid; 
+    border-width: medium;
+    border-color: maroon;
+    border-radius: 10px
+}
+
+.card2{
+    border: solid; 
+    border-width: medium;
+    border-color: maroon;
+    border-radius: 10px
+}
+
+.card3{
+    border: solid; 
+    border-width: medium;
+    border-color: maroon;
+    border-radius: 10px
+}
+
+.card4{
+    border: solid; 
+    border-width: medium;
+    border-color: maroon;
+    border-radius: 10px
+}
+
+.card5{
+    border: solid; 
+    border-width: medium;
+    border-color: maroon;
+    border-radius: 10px
+}
