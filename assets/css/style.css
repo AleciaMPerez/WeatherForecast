@@ -1,9 +1,11 @@
 *{
-    background-color: lightsteelblue;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande'
 
 }
 
+body {
+    background-color: seashell;
+}
 
 .currentContainer{
     border: solid; 
@@ -13,11 +15,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: lavender;
 }
 
 .cardContainer {
     display: flex;
-    justify-content: center;
+    flex-grow: 1;
     align-items: center;
 }
 
@@ -25,33 +28,43 @@
     border: solid; 
     border-width: medium;
     border-color: maroon;
-    border-radius: 10px
+    border-radius: 10px;
+    background-color: lavenderblush;
+
 }
 
 .card2{
     border: solid; 
     border-width: medium;
     border-color: maroon;
-    border-radius: 10px
+    border-radius: 10px;
+    background-color: lavenderblush;
+
 }
 
 .card3{
     border: solid; 
     border-width: medium;
     border-color: maroon;
-    border-radius: 10px
+    border-radius: 10px;
+    background-color: lavenderblush;
+
 }
 
 .card4{
     border: solid; 
     border-width: medium;
     border-color: maroon;
-    border-radius: 10px
+    border-radius: 10px;
+    background-color: lavenderblush;
+
 }
 
 .card5{
     border: solid; 
     border-width: medium;
     border-color: maroon;
-    border-radius: 10px
+    border-radius: 10px;
+    background-color: lavenderblush;
+
 }
