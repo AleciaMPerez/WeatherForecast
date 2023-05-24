@@ -24,7 +24,19 @@ search.addEventListener("click", searchCity);
 
 //That city's current date, temperature, an icon representation of weather conditions, the humidity, and the the wind speed appear on the screen.
 
+function displayCurrent (data) {
+    //current temperature
+    var currentTemp = data.main[0];
+    var currentTempDiv = document.querySelector("temperatureCurrent");
+    //current humidity
+    var currentHum = data.main[1];
+    var currentHumDiv = document.querySelector("humidityCurrent");
+    //currentW wind speed
+    var currentWind = data.wind[1];
+    var currentWindDiv = document.querySelector("windSpeedCurrent");
+    
 
+}
 
 
 
