@@ -26,17 +26,22 @@ search.addEventListener("click", searchCity);
 
 function displayCurrent (data) {
     //current temperature
-    var currentTemp = data.main[0];
-    var currentTempDiv = document.querySelector("temperatureCurrent");
+    var currentTemp = data.main.temperature;
+    var currentTempDiv = document.querySelector(".temperatureCurrent");
     //current humidity
-    var currentHum = data.main[1];
-    var currentHumDiv = document.querySelector("humidityCurrent");
-    //currentW wind speed
-    var currentWind = data.wind[1];
-    var currentWindDiv = document.querySelector("windSpeedCurrent");
-    
-
+    var currentHum = data.main.humidity;
+    var currentHumDiv = document.querySelector(".humidityCurrent");
+    //current wind speed
+    var currentWind = data.wind.speed;
+    var currentWindDiv = document.querySelector(".windSpeedCurrent");
+    //api
+    var apiURL =
+    "http://api.openweathermap.org/data/2.5/weather?q=" +
+    cityInput.value +
+    "&appid=" +
+    apiKey + "&units=imperial";
 }
+
 
 
 
