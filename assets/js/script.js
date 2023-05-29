@@ -35,7 +35,7 @@ function displayCurrent (data) {
     .then (function(response)
     {return response.json()
     })
-    .then( response(data)
+    .then(response(data)
     {console.log(data)
     })
     //current temperature
@@ -47,7 +47,11 @@ function displayCurrent (data) {
     //current wind speed
     var currentWind = data.wind.speed;
     var currentWindDiv = document.querySelector(".windSpeedCurrent");
-    link.textContent=data[i].
+    link.textContent=currentTemp.currentTempDiv;
+    link.textContent=currentHum.currentHumDiv;
+    link.textContent=currentWind.currentWindDiv;
+    //append
+    
 }
 
 
