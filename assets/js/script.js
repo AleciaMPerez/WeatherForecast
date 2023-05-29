@@ -47,11 +47,11 @@ function displayCurrent (data) {
     //current wind speed
     var currentWind = data.wind.speed;
     var currentWindDiv = document.querySelector(".windSpeedCurrent");
-    link.textContent=currentTemp.currentTempDiv;
-    link.textContent=currentHum.currentHumDiv;
-    link.textContent=currentWind.currentWindDiv;
+    link.textContent=currentTempDiv.currentTemp;
+    link.textContent=currentHumDiv.currentHum;
+    link.textContent=currentWindDiv.currentWind;
     //append
-    
+
 }
 
 
