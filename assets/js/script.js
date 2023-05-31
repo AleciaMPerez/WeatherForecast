@@ -61,7 +61,7 @@ search.addEventListener("click", searchCity);
 
 //current temperature
 function displayCurrent(data) {
-  document.getElementById("currentDate").innerHTML = data.dt
+  document.getElementById("currentDate").innerHTML = dayjs(Date.now()).format('MM/DD/YYYY')
   document.getElementById("currentTemp").innerHTML =
     "Temperature: " + data.main.temp + "&deg;F";
   document.getElementById("currentHum").innerHTML =
@@ -72,7 +72,7 @@ function displayCurrent(data) {
 
 //The 5 day forecast appears in individual cards.
 function fiveDayForecast() {
-  document.getElementById("day1").innerHTML = fiveDayArray[0].dt
+  document.getElementById("day1").innerHTML = dayjs(fiveDayArray[0].dt_txt).format('MM/DD/YYYY')
   document.getElementById("temp1").innerHTML =
     "Temperature: " + fiveDayArray[0].main.temp + "&deg;F";
   document.getElementById("hum1").innerHTML =
@@ -80,8 +80,8 @@ function fiveDayForecast() {
   document.getElementById("speed1").innerHTML =
     "Wind Speed: " + fiveDayArray[0].wind.speed + "mph";
 
-    document.getElementById("day2").innerHTML = fiveDayArray[1].dt
-  document.getElementById("temp2").innerHTML =
+    document.getElementById("day2").innerHTML = dayjs(fiveDayArray[1].dt_txt).format('MM/DD/YYYY')
+    document.getElementById("temp2").innerHTML =
     "Temperature: " + fiveDayArray[1].main.temp + "&deg;F";
   document.getElementById("hum2").innerHTML =
     "Humidity: " + fiveDayArray[1].main.humidity + "%";
@@ -89,8 +89,8 @@ function fiveDayForecast() {
     "Wind Speed: " + fiveDayArray[1].wind.speed + "mph";
 
 
-    document.getElementById("day3").innerHTML = fiveDayArray[2].dt
-  document.getElementById("temp3").innerHTML =
+    document.getElementById("day3").innerHTML = dayjs(fiveDayArray[2].dt_txt).format('MM/DD/YYYY')
+    document.getElementById("temp3").innerHTML =
     "Temperature: " + fiveDayArray[2].main.temp + "&deg;F";
   document.getElementById("hum3").innerHTML =
     "Humidity: " + fiveDayArray[2].main.humidity + "%";
@@ -98,8 +98,8 @@ function fiveDayForecast() {
     "Wind Speed: " + fiveDayArray[2].wind.speed + "mph";
 
 
-    document.getElementById("day4").innerHTML = fiveDayArray[3].dt
-  document.getElementById("temp4").innerHTML =
+    document.getElementById("day4").innerHTML = dayjs(fiveDayArray[3].dt_txt).format('MM/DD/YYYY')
+    document.getElementById("temp4").innerHTML =
     "Temperature: " + fiveDayArray[3].main.temp + "&deg;F";
   document.getElementById("hum4").innerHTML =
     "Humidity: " + fiveDayArray[3].main.humidity + "%";
@@ -107,7 +107,7 @@ function fiveDayForecast() {
     "Wind Speed: " + fiveDayArray[3].wind.speed + "mph";
 
 
-    document.getElementById("day5").innerHTML = fiveDayArray[4].dt
+    document.getElementById("day5").innerHTML = dayjs(fiveDayArray[4].dt_txt).format('MM/DD/YYYY')
     document.getElementById("temp5").innerHTML =
     "Temperature: " + fiveDayArray[4].main.temp + "&deg;F";
   document.getElementById("hum5").innerHTML =
