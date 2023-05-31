@@ -9,7 +9,7 @@ var fiveDayArray = [];
 function searchCity(e) {
   e.preventDefault();
   var apicurrentURL =
-    "http://api.openweathermap.org/data/2.5/weather?q=" +
+    "https://api.openweathermap.org/data/2.5/weather?q=" +
     cityInput.value +
     "&appid=" +
     apiKey +
@@ -32,7 +32,7 @@ function searchCity(e) {
 function forecast() {
   //URL from where the data is pulled
   var fiveDayForecastURL =
-    "http://api.openweathermap.org/data/2.5/forecast?q=" +
+    "https://api.openweathermap.org/data/2.5/forecast?q=" +
     cityInput.value +
     "&appid=" +
     apiKey +
