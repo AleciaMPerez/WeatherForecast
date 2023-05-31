@@ -72,24 +72,24 @@ document.getElementById("currentSpeed").innerHTML="Wind Speed: " + data.wind.spe
 //The 5 day forecast appears in individual cards.
 function fiveDayForecast () {
   document.getElementById("temp1").innerHTML= "Temperature: " + fiveDayArray[0].main.temp + "&deg;F";
-  //document.getElementById("hum1").innerHTML="Humidity: " + pathway to data + "%";
-  //document.getElementById ("speed1").innerHTML="Wind Speed: " + pathway to data + "mph";
+  document.getElementById("hum1").innerHTML="Humidity: " + fiveDayArray[0].main.humidity + "%";
+  document.getElementById ("speed1").innerHTML="Wind Speed: " + fiveDayArray[0].wind.speed + "mph";
 
-  //document.getElementById("temp2").innerHTML= "Temperature: " + pathway to data + "&deg;F";
-  //document.getElementById("hum2").innerHTML="Humidity: " + pathway to data + "%";
-  //document.getElementById ("speed2").innerHTML="Wind Speed: " + pathway to data + "mph";
+  document.getElementById("temp2").innerHTML= "Temperature: " + fiveDayArray[1].main.temp + "&deg;F";
+  document.getElementById("hum2").innerHTML="Humidity: " + fiveDayArray[1].main.humidity + "%";
+  document.getElementById ("speed2").innerHTML="Wind Speed: " + fiveDayArray[1].wind.speed + "mph";
 
-  //document.getElementById("temp3").innerHTML= "Temperature: " + pathway to data + "&deg;F";
-  //document.getElementById("hum3").innerHTML="Humidity: " + pathway to data + "%";
-  //document.getElementById ("speed3").innerHTML="Wind Speed: " + pathway to data + "mph";
+  document.getElementById("temp3").innerHTML= "Temperature: " + fiveDayArray[2].main.temp + "&deg;F";
+  document.getElementById("hum3").innerHTML="Humidity: " + fiveDayArray[2].main.humidity + "%";
+  document.getElementById ("speed3").innerHTML="Wind Speed: " + fiveDayArray[2].wind.speed + "mph";
 
-  //document.getElementById("temp4").innerHTML= "Temperature: " + pathway to data + "&deg;F";
-  //document.getElementById("hum4").innerHTML="Humidity: " + pathway to data + "%";
-  //document.getElementById ("speed4").innerHTML="Wind Speed: " + pathway to data + "mph";
+  document.getElementById("temp4").innerHTML= "Temperature: " + fiveDayArray[3].main.temp + "&deg;F";
+  document.getElementById("hum4").innerHTML="Humidity: " + fiveDayArray[3].main.humidity + "%";
+  document.getElementById ("speed4").innerHTML="Wind Speed: " + fiveDayArray[3].wind.speed + "mph";
 
-  //document.getElementById("temp5").innerHTML= "Temperature: " + pathway to data + "&deg;F";
-  //document.getElementById("hum5").innerHTML="Humidity: " + pathway to data + "%";
-  //document.getElementById ("speed5").innerHTML="Wind Speed: " + pathway to data + "mph";
+  document.getElementById("temp5").innerHTML= "Temperature: " + fiveDayArray[4].main.temp + "&deg;F";
+  document.getElementById("hum5").innerHTML="Humidity: " + fiveDayArray[4].main.humidity + "%";
+  document.getElementById ("speed5").innerHTML="Wind Speed: " + fiveDayArray[4].wind.speed + "mph";
 }
 
 
