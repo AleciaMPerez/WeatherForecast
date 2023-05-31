@@ -2,30 +2,64 @@
 var apiKey = "0094105c713bc17695af1d675f234ed7";
 var search = document.querySelector("#searchButton");
 var cityInput = document.querySelector("#city");
+var fiveDayArray = [];
 
-//Search for a city
+
+//Search for a city and data
 
 function searchCity(e) {
   e.preventDefault();
-  var apiURL =
+  var apicurrentURL =
     "http://api.openweathermap.org/data/2.5/weather?q=" +
     cityInput.value +
     "&appid=" +
     apiKey + "&units=imperial";
-  fetch(apiURL)
+
+ // pulls the data 
+  fetch(apicurrentURL) 
     .then(function (response) {
       return response.json();
     })
+    // displays the data 
     .then(function (data) {
       console.log(data);
     displayCurrent(data);
-
-    });
+    //runs the forecast function
+    forecast()
+          });
 }
+
+
+
+
+function forecast() {
+  //URL from where the data is pulled
+    var fiveDayForecastURL = "http://api.openweathermap.org/data/2.5/forecast?q=" +
+    cityInput.value +
+    "&appid=" + apiKey +"&units=imperial";
+    //fetches the data 
+    fetch(fiveDayForecastURL)
+    .then(function(response) {
+      return response.json();
+   
+    })
+//displays the data 
+    .then(function (data) {
+      //run a for loop for pulling increments of 8
+      for (let i=0; i<data.list.length; i += 8){
+//index of 8 and pushing it through the fiveDayArray so that it pulls the increments of 8 that will be used for the specific days from data.list
+        fiveDayArray.push(data.list[i]);
+      }
+console.log(fiveDayArray)
+    })
+    //calls the fivedayforecast function
+    .then(function() {
+    fiveDayForecast()
+
+    })
+}
+
 search.addEventListener("click", searchCity);
-
-//That city's current date, temperature, an icon representation of weather conditions, the humidity, and the the wind speed appear on the screen.
-
 
     //current temperature
 function displayCurrent(data) {
@@ -35,10 +69,29 @@ document.getElementById("currentSpeed").innerHTML="Wind Speed: " + data.wind.spe
 }
 
 
-
-
-
 //The 5 day forecast appears in individual cards.
+function fiveDayForecast () {
+  document.getElementById("temp1").innerHTML= "Temperature: " + fiveDayArray[0].main.temp + "&deg;F";
+  //document.getElementById("hum1").innerHTML="Humidity: " + pathway to data + "%";
+  //document.getElementById ("speed1").innerHTML="Wind Speed: " + pathway to data + "mph";
+
+  //document.getElementById("temp2").innerHTML= "Temperature: " + pathway to data + "&deg;F";
+  //document.getElementById("hum2").innerHTML="Humidity: " + pathway to data + "%";
+  //document.getElementById ("speed2").innerHTML="Wind Speed: " + pathway to data + "mph";
+
+  //document.getElementById("temp3").innerHTML= "Temperature: " + pathway to data + "&deg;F";
+  //document.getElementById("hum3").innerHTML="Humidity: " + pathway to data + "%";
+  //document.getElementById ("speed3").innerHTML="Wind Speed: " + pathway to data + "mph";
+
+  //document.getElementById("temp4").innerHTML= "Temperature: " + pathway to data + "&deg;F";
+  //document.getElementById("hum4").innerHTML="Humidity: " + pathway to data + "%";
+  //document.getElementById ("speed4").innerHTML="Wind Speed: " + pathway to data + "mph";
+
+  //document.getElementById("temp5").innerHTML= "Temperature: " + pathway to data + "&deg;F";
+  //document.getElementById("hum5").innerHTML="Humidity: " + pathway to data + "%";
+  //document.getElementById ("speed5").innerHTML="Wind Speed: " + pathway to data + "mph";
+}
+
 
 
 //List searched cities
